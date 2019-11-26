@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 % \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[margin=0.8in]{geometry}
+\usepackage[margin=0.73in]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -30,8 +30,8 @@
 
 \begin{document}
 \title{\textit{Observing nuclear magnetic resonance in aqueous $FeCl_3$ solutions}}
-\author{Ruchir Tullu }% Ruchir Tullu (1004220951)
-\date{\today}
+\author{Ruchir Tullu }  % Ruchir Tullu (1004220951)
+\date{November 28, 2019} %\today
 
 \maketitle
 
@@ -134,7 +134,7 @@ Here, $M(t)$ corresponds to the height of the induction tail of the second pulse
  \begin{figure}[htb]
      \centering
      \includegraphics[scale=0.75]{schematic.PNG}
-     \caption{Schematic of the experimental setup (taken from \cite{Lab Manual}); the spectrometer is represented by the box containing the transmitter and receiver. Here, the oscilloscope is not represented in this diagram. The diodes at the transmitter input ensure that voltages greater than 0.6 $V$ appear at the sample; the diodes at the receiver input ensure that the receiver is protected from high voltages during operation \cite{Lab Manual}.}
+     \caption{Schematic of the experimental setup (taken from \cite{Lab Manual}); the spectrometer is represented by the box containing the transmitter and receiver. Here, the oscilloscope is not represented in this diagram. The diodes at the transmitter input ensure that voltages larger than 0.6 $V$ appear at the sample; the diodes at the receiver input ensure that the receiver is protected from high voltages during operation \cite{Lab Manual}.}
      \label{fig:schematic}
  \end{figure}
 
@@ -144,7 +144,7 @@ Here, $M(t)$ corresponds to the height of the induction tail of the second pulse
 
 %%%%% Experimental Setup and Procedure %%%%
 % \subsection{Experimental Setup and Procedure}
-
+% 
 %%%%% End of Experimental Setup and Procedure %%%%
 
 
@@ -171,7 +171,7 @@ Data was collected for the height of the spin echo and free induction tails at d
 \end{table}
 
 
-\begin{figure}[htb]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.65]{raw_data.png}
     \caption{Heights of spin echo and free induction tail signals for $T_2$ and $T_1$ measurements respectively, measured in a magnetic field strength of $0.4 \pm 0.02 T$}
@@ -179,7 +179,7 @@ Data was collected for the height of the spin echo and free induction tails at d
 \end{figure}
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!tbp]    %!tbp
   \begin{subfigure}[b]{0.5\textwidth}
     \includegraphics[width=\textwidth]{T1.png}
     \caption{Height of free induction tail plotted against different delay times to determine $T_1$}
@@ -195,7 +195,7 @@ Data was collected for the height of the spin echo and free induction tails at d
 \label{ODR fits}
 \end{figure}
  
- Two values for the gyromagnetic ratio were found; there were 2 distinct frequencies observed on the oscilloscope when observing the NMR signal from the spectrometer. These arose when viewing the signal at different time scales on the oscilloscope. For a frequency of $\sim 5.61 \ MHz$, we obtain $\gamma = 88.12 \pm 4.33 \ MHzT^{-1}$; for a frequency of $\sim 3 \ MHz$, we obtain $\gamma = 47.12 \pm 2.31 \ MHzT^{-1}$. The corresponding g-factors are $1.84 \pm 0.09$ and $0.98 \pm 0.05$, respectively. Section \ref{Discussion} discusses some reasons behind the different frequencies, and how the exact frequency could have been better determined.
+ Two values for the gyromagnetic ratio were found; there were 2 distinct frequencies observed on the oscilloscope when observing the NMR signal from the spectrometer. These arose when viewing the signal at different time scales on the oscilloscope. For a frequency of $\sim 5.61 \ MHz$, we obtain $\gamma = 88.12 \pm 4.33 \ MHzT^{-1}$; for a frequency of $\sim 3.00 \ MHz$, we obtain $\gamma = 47.12 \pm 2.31 \ MHzT^{-1}$. The corresponding g-factors are $1.84 \pm 0.09$ and $0.98 \pm 0.05$, respectively. Section \ref{Discussion} discusses some reasons behind the different frequencies, and how the exact frequency of the signal could have been better determined.
  
  
  
@@ -203,7 +203,7 @@ Data was collected for the height of the spin echo and free induction tails at d
 
 
 %%%%%%%%%%% Discussion Start %%%%%%%%%%%%
-\section{Discussion and Results}\label{Discussion}
+\section{Discussion}\label{Discussion}
 As can be seen in Table \ref{tab:fit_parameters}, we see that $T_1 < T_2$ for the $FeCl_3$ solution. However, $T_1$ and $T_2$ fall within range of each other's uncertainties, and so the property that $T_1 \approx T_2$ for non-viscous liquids may indeed hold here. The $T_2$ fit has a reasonable $\chi^2 / dof$ and $\chi^2$ CDF, however the same cannot be said for the $T_1$ fit. The large values of $\chi^2 / dof$ and $\chi^2$ CDF indicate here that the fit is not good, and that the uncertainties were under-estimated. However, since the uncertainty estimates for $T_2$ were the same as for $T_1$, and they yielded a reasonable $\chi^2 / dof$ and $\chi^2$ CDF, it is safe to say that the large values for these parameters in the $T_1$ fits are a result of the relatively skewed data points as seen in Figure \ref{fig:f1}. By observation, the data points are not oriented exactly as per an exponential fit, with some points being skewed, and hence result in a bad fit for $T_1$. Increased data collection could resulted in a more reasonable fit.
 \newline
 
@@ -238,18 +238,6 @@ In this experiment we studied the NMR characteristics of aqueous $FeCl_3$ soluti
 \bibitem{Lab Manual}
 D. Bailey, J. Harlow, J. Vise, J. Pitre, NMR Nuclear Magnetic Resonance, University of Toronto, 1988. https://www.physics.utoronto.ca/~phy326/nmr/nmr.pdf (accessed October, 2019).
 
-\bibitem{Spin Echo}
-Gavin W Morley, SpinEcho GWM stills.jpg,     Wikimedia Commons. (2011). https://commons.wikimedia.org/wiki/File:SpinEcho\_GWM\_stills.jpg (accessed October, 2019).
-
-\bibitem{ODR}
-D. Bailey, odr\_fit\_to\_data.py, (2013). https://www.physics.utoronto.ca/~phy326/python/\\odr\_fit\_to\_data.py (accessed October, 2019).
-
-\bibitem{Gyromagnetic_ratio_NIST}
-P. Keller, Values of Gyromagnetic Ratios, 2017. https://www.metrolab.com/wp-content/uploads/2017/03/Values-of-Gyromagnetic-Ratios.pdf (accessed October, 2019).
-
-\bibitem{Benchtop NMR}
-Nanalysis Corp., Applications — Benchtop NMR, Nanalysis. (n.d.). https://www.nanalysis.com/applications (accessed November, 2019).
-
 \bibitem{NMR Quantum Computers-Jones2011}
 J.A. Jones, Quantum computing with NMR, Progress in Nuclear Magnetic Resonance Spectroscopy. 59 (2011) 91–120. doi:10.1016/j.pnmrs.2010.11.001.(accessed November, 2019).
 
@@ -258,6 +246,18 @@ W.S. Warren;, The Usefulness of NMR Quantum Computing, 277 (1997) 1688–1690. d
 
 \bibitem{ACS NMR}
 American Chemical Society, NMR and MRI: Applications in Chemistry and Medicine, American Chemical Society. (2011). https://www.acs.org/content/acs/en/education/whatischemistry/landmarks/mri.html\ (accessed November, 2019).
+
+\bibitem{Benchtop NMR}
+Nanalysis Corp., Applications — Benchtop NMR, Nanalysis. (n.d.). https://www.nanalysis.com/applications (accessed November, 2019).
+
+\bibitem{Spin Echo}
+Gavin W Morley, SpinEcho GWM stills.jpg,     Wikimedia Commons. (2011). https://commons.wikimedia.org/wiki/File:SpinEcho\_GWM\_stills.jpg (accessed October, 2019).
+
+\bibitem{ODR}
+D. Bailey, odr\_fit\_to\_data.py, (2013). https://www.physics.utoronto.ca/~phy326/python/\\odr\_fit\_to\_data.py (accessed October, 2019).
+
+\bibitem{Gyromagnetic_ratio_NIST}
+P. Keller, Values of Gyromagnetic Ratios, 2017. https://www.metrolab.com/wp-content/uploads/2017/03/Values-of-Gyromagnetic-Ratios.pdf (accessed October, 2019).
 
 \bibitem{aliasing}
 H. Gonçalves, Aliasing, OnMyPhD. (n.d.). \\ http://www.onmyphd.com/?p=aliasing\#h2\_samplingtheorem (accessed November, 2019).
